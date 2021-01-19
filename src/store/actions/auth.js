@@ -1,5 +1,4 @@
 import axios from 'axios'
-import Logout from '../../components/Logout/Logout'
 import {AUTH_SUCCES, AUTH_LOGOUT} from './actionTypes'
 
 export function auth(email, password, isLogin) {
@@ -10,10 +9,10 @@ export function auth(email, password, isLogin) {
       returnecureToken: true
     }
 
-    let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCJYl0S6dm8ts0G_peQ6CgP_ySJeKDpJpw'
+    let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCn2NM9nJXRH9UY-RWz7VAPI1QUAFm9Ru4'
 
     if (isLogin) {
-      url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCJYl0S6dm8ts0G_peQ6CgP_ySJeKDpJpw'
+      url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCn2NM9nJXRH9UY-RWz7VAPI1QUAFm9Ru4'
     }
 
     const respons = await axios.post(url, authData)

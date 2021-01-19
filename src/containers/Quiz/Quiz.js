@@ -17,7 +17,6 @@ class Quiz extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div className={classes.Quiz}>
         <div className={classes.QuizWrapper}>
@@ -46,7 +45,6 @@ class Quiz extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log('state', state)
   return {
     results: state.quiz.results,
     isFinished: state.quiz.isFinished,
